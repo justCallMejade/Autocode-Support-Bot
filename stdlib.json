@@ -1,0 +1,159 @@
+{
+  "name": "jade-studios/arsenalcraftsupportbot",
+  "timeout": 30000,
+  "connector": false,
+  "events": {
+    "functions/PASSIVE/HourlyStatus.js": {
+      "name": "scheduler.hourly",
+      "subtype": {
+        "offset": "45 minutes"
+      }
+    },
+    "functions/FAQ-System/FAQ.js": {
+      "name": "discord.command",
+      "subtype": {
+        "command": "faq"
+      }
+    },
+    "functions/HelpSystem/Help.js": {
+      "name": "discord.command",
+      "subtype": {
+        "command": "help"
+      }
+    },
+    "functions/HelpSystem/button/HelpExit.js": {
+      "name": "discord.message.button.interaction",
+      "subtype": {
+        "custom_id": "help-exit"
+      }
+    },
+    "functions/HelpSystem/button/HelpCommandLists.js": {
+      "name": "discord.message.button.interaction",
+      "subtype": {
+        "custom_id": "help-command-list"
+      }
+    },
+    "functions/HelpSystem/button/HelpGeneralCommands.js": {
+      "name": "discord.message.button.interaction",
+      "subtype": {
+        "custom_id": "help-general-commands"
+      }
+    },
+    "functions/HelpSystem/button/HelpSupportCommands.js": {
+      "name": "discord.message.button.interaction",
+      "subtype": {
+        "custom_id": "help-support-commands"
+      }
+    },
+    "functions/TicketSystem/selectmenu/TicketMenu.js": {
+      "name": "discord.message.selectmenu.interaction",
+      "subtype": {
+        "custom_id": "ticket-menu"
+      }
+    },
+    "functions/Commands/Translate.js": {
+      "name": "discord.command",
+      "subtype": {
+        "command": "translate"
+      }
+    },
+    "functions/TicketSystem/TicketClose.js": {
+      "name": "discord.command",
+      "subtype": {
+        "command": "close-ticket"
+      }
+    },
+    "functions/TicketSystem/button/TicketReOpen.js": {
+      "name": "discord.message.button.interaction",
+      "subtype": {
+        "custom_id": "ticket-reopen"
+      }
+    },
+    "functions/TicketSystem/button/TicketDelete.js": {
+      "name": "discord.message.button.interaction",
+      "subtype": {
+        "custom_id": "ticket-delete"
+      }
+    },
+    "functions/FAQ-System/ASK.js": {
+      "name": "discord.command",
+      "subtype": {
+        "command": "ask"
+      }
+    },
+    "functions/HelpSystem/LatestNews.js": {
+      "name": "discord.command",
+      "subtype": {
+        "command": "latest-news"
+      }
+    },
+    "functions/SuggestionSystem/SuggestionCommand.js": {
+      "name": "discord.command",
+      "subtype": {
+        "command": "suggest"
+      }
+    },
+    "functions/SuggestionSystem/DenySuggestion.js": {
+      "name": "discord.command",
+      "subtype": {
+        "command": "deny-suggestion"
+      }
+    },
+    "functions/SuggestionSystem/AcceptSuggestion.js": {
+      "name": "discord.command",
+      "subtype": {
+        "command": "accept-suggestion"
+      }
+    },
+    "functions/TicketSystem/TicketOpen.js": {
+      "name": "discord.command",
+      "subtype": {
+        "command": "open-ticket"
+      }
+    },
+    "functions/TicketSystem/button/TicketCreate.js": {
+      "name": "discord.message.button.interaction",
+      "subtype": {
+        "custom_id": "ticket-create"
+      }
+    }
+  },
+  "env": [
+    {
+      "name": "GUILDID",
+      "description": "Guild's ID"
+    },
+    {
+      "name": "CATEGORY",
+      "description": "Category for creating tickets"
+    },
+    {
+      "name": "EVERYONE",
+      "description": "Everyone role ID"
+    },
+    {
+      "name": "SUPPORTROLE",
+      "description": "Support Staff role ID"
+    },
+    {
+      "name": "DEVTEAM",
+      "description": "Dev Team role ID"
+    },
+    {
+      "name": "MODROLE",
+      "description": "Mod role ID"
+    },
+    {
+      "name": "SERVERNAME",
+      "description": "Server Name"
+    },
+    {
+      "name": "LOGS",
+      "description": "Channel ID for ticket logs"
+    },
+    {
+      "name": "SUGGESTION",
+      "description": "Channel ID for suggestions"
+    }
+  ]
+}
